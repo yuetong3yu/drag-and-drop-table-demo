@@ -1,51 +1,30 @@
-import { Table, Upload } from 'antd'
-
-const { Dragger } = Upload
+import './FileTable.css'
 
 export const FileTable = () => {
-  const columns = [
-    {
-      title: 'Table Number',
-      dataIndex: 'tableNumber',
-      key: 'tableNumber',
-      width: 200,
-    },
-    {
-      title: 'Title',
-      dataIndex: 'title',
-      key: 'title',
-    },
-    {
-      title: 'Document file',
-      dataIndex: 'document',
-      key: 'document',
-      width: 600,
-      render: (text, record) => {
-        return (
-          <div>
-            <Dragger>
-              <p className="ant-upload-text">Click or drag file</p>
-            </Dragger>
-          </div>
-        )
-      },
-    },
-  ]
-
-  const dataSource = [
-    {
-      key: '1',
-      tableNumber: '1',
-      title: 'agony of human life',
-      document: '',
-    },
-    {
-      key: '2',
-      tableNumber: '2',
-      title: `Today's cooking secret`,
-      document: '',
-    },
-  ]
-
-  return <Table columns={columns} dataSource={dataSource} />
+  return (
+    <table className="table">
+      <thead>
+        <tr>
+          <th colSpan={3}>Drag & Drop Table</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td width={120}>Table Number </td>
+          <td width={250}>Title</td>
+          <td>File</td>
+        </tr>
+        <tr style={{ textAlign: 'center' }}>
+          <td>1</td>
+          <td>agony of human life</td>
+          <td>todo...</td>
+        </tr>
+        <tr style={{ textAlign: 'center' }}>
+          <td>2</td>
+          <td>Today's cooking secret</td>
+          <td>todo...</td>
+        </tr>
+      </tbody>
+    </table>
+  )
 }
