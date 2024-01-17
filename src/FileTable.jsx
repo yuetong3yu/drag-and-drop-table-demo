@@ -1,3 +1,4 @@
+import { DropUpload } from './DropUpload'
 import './FileTable.css'
 
 export const FileTable = () => {
@@ -17,12 +18,16 @@ export const FileTable = () => {
         <tr style={{ textAlign: 'center' }}>
           <td>1</td>
           <td>agony of human life</td>
-          <td>todo...</td>
+          <td>
+            <DropUpload />
+          </td>
         </tr>
         <tr style={{ textAlign: 'center' }}>
           <td>2</td>
           <td>Today's cooking secret</td>
-          <td>todo...</td>
+          <td>
+            <DropUpload />
+          </td>
         </tr>
       </tbody>
     </table>
